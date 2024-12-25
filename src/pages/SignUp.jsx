@@ -13,7 +13,7 @@ const SignUp = () => {
 
     const handleSignUp=()=>{
         axios 
-           .post('https://books-app-server-ten.vercel.app/user/signup',{username, email, password})
+           .post('https://bookappserverassignment.vercel.app/user/signup',{username, email, password})
            .then(()=>{
             enqueueSnackbar('Sign up Successful',{variant:'success'});
             navigate('/');
