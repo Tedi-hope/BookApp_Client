@@ -26,10 +26,11 @@ const Home = () => {
   };
 
 
-
   useEffect(()=>{
    axios
-      .get('https://bookappserverassignment.vercel.app/books')
+      .get('https://bookappserverassignment.vercel.app/books',{
+        headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
+      })
       .then((response)=>{
         setBooks(response.data.data);
       })

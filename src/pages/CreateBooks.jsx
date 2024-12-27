@@ -24,6 +24,7 @@ const CreateBooks = () => {
      .post('https://bookappserverassignment.vercel.app/books',data,{
         headers:{
           'Content-Type':'multipart/form-data',
+          Authorization: `Bearer ${localStorage.getItem("token")}` // Ensure token is included
         }
      })
      .then(()=>{
@@ -34,9 +35,10 @@ const CreateBooks = () => {
         //alert('An error happened.Please Check console');
         console.log(error);
      });
+     //console.log(`${localStorage.getItem('token')}`);
   };
 
-//localhost server====>http://localhost:5555/books
+//localhost server====>http://localhost:4444/books
 //vercel host=====>https://bookappserverassignment.vercel.app/books
 
   return (

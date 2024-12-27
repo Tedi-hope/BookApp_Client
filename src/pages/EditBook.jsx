@@ -73,7 +73,7 @@ const EditBook = () => {
      </div>
 
      <button className="btn btn-primary btn-lg" onClick={handleEditBook}>
-        Save
+        Update
      </button>
 
     </div>
